@@ -1,5 +1,7 @@
 # Vehicle_Recognition_System
 
+IMPORTANT: Before this program will run, weights must be downloaded from https://pjreddie.com/darknet/yolo/.
+
 A vehicle recognition system.
 
 
