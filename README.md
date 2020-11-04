@@ -14,7 +14,8 @@ A vehicle recognition system.
 
 
 
-Sources Used:
+Open Sources Used:
+
 
 Copyright © 2019 by Spectrico
 Licensed under the MIT License
