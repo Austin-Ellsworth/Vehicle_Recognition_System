@@ -10,6 +10,7 @@ import time
 import cv2
 import os
 import classifier
+import Main
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -118,6 +119,7 @@ if len(idxs) > 0:
 		if classIDs[i] == 2:
 			start = time.time()
 			result = car_color_classifier.predict(image[max(y,0):y + h, max(x,0):x + w])
+			print("result: ", result[0]['model'], result[0]['make'])
 			end = time.time()
 			# show timing information on MobileNet classifier
 			print("[INFO] classifier took {:.6f} seconds".format(end - start))
@@ -132,9 +134,12 @@ if len(idxs) > 0:
 			0.5, color, 2)
 
 # show the output image
-cv2.namedWindow('Image', cv2.WINDOW_NORMAL)
-cv2.resizeWindow('Image', W, H)
-cv2.imshow("Image", image)
-cv2.imwrite("output.jpg", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+#cv2.namedWindow('Image', cv2.WINDOW_NORMAL)
+#cv2.resizeWindow('Image', W, H)
+#cv2.imshow("Image", image)
+#cv2.imwrite("output.jpg", image)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
+
+Main.main("output.jpg")
+
