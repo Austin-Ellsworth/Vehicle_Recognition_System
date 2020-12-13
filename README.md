@@ -26,6 +26,15 @@ optional arguments:
   --yolo MODEL_PATH        path to YOLO model weight file, default yolo-coco
   --confidence CONFIDENCE  minimum probability to filter weak detections, default 0.5
   --threshold THRESHOLD    threshold when applying non-maxima suppression, default 0.3
+  
+Results: 
+
+Before 
+Example:
+![](3.png)
+
+After
+![](imgOriginalScene.png)
 
 
 Requirements
