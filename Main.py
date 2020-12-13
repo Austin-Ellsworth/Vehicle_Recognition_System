@@ -18,6 +18,8 @@ SCALAR_RED = (0.0, 0.0, 255.0)
 showSteps = False
 
 ###################################################################################################
+plate = [""]
+
 def main(img):
 
     blnKNNTrainingSuccessful = DetectChars.loadKNNDataAndTrainKNN()         # attempt KNN training
@@ -62,6 +64,8 @@ def main(img):
 
         drawRedRectangleAroundPlate(imgOriginalScene, licPlate)             # draw red rectangle around plate
 
+        plate[0] = licPlate.strChars
+
         print("\nlicense plate read from image = " + licPlate.strChars + "\n")  # write license plate text to std out
         print("----------------------------------------")
 
@@ -75,8 +79,11 @@ def main(img):
 
     cv2.waitKey(0)					# hold windows open until user presses a key
 
-    return
 # end main
+
+###################################################################################################
+def getLicensePlate():
+    return plate[0]
 
 ###################################################################################################
 def drawRedRectangleAroundPlate(imgOriginalScene, licPlate):
