@@ -48,14 +48,4 @@ yolov3.weights must be downloaded from https://pjreddie.com/media/files/yolov3.w
 
 
 
-
-
-
-
-Open Sources Used:
-
 Licensed under the MIT License
-
-Stanford car dataset: 
-
-https://ai.stanford.edu/~jkrause/cars/car_dataset.html
